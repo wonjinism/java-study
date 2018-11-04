@@ -7,7 +7,7 @@ public class TestMap1 {
 		HashMap<String, Object> map = new HashMap<>(); // 타입을 지정해 준다는 것이 Generic을 한다는 것
 		map.put("s1", "Wonjin");
 		map.put("s2", "Simon");
-		map.put("s3", "Sonya"); 
+		map.put("s3", "Sony"); 
 //		map.put("s4", 555)); // 타입 지정 때문에 555가 들어갈 수 없음.
 		System.out.println(map);
 		System.out.println(map.get("아이유")); // null // 존재하지 않는 키 값
@@ -23,11 +23,15 @@ public class TestMap1 {
 		System.out.println(map);
 		System.out.println(map.remove("s5")); // null // key 없는 경우
 		map.clear();
+		
 		System.out.println(map); // {} 주소와 객체 타입은 그대로
 		map.put("em",  new Employee("엔젤", 500));
 		Employee e = (Employee)map.get("em");
 		System.out.println(e.getEname());
-		
 		System.out.println(e.getSalary());
+
+		// 객체 캐스팅으로 멤버 접근
+		System.out.println(((Employee)map.get("em")).getEname());
+		System.out.println(((Employee)map.get("em")).getSalary());
 	}
 }

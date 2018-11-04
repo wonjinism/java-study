@@ -20,15 +20,28 @@ public class TestIterator {
 		System.out.println(list); 
 		System.out.println();
 		
-		// 아래 메서드를 이용해서 모든 요소를 출력
+		// Iterator 인터페이스를  이용해서 모든 요소를 출력
+		System.out.println(list.iterator()); // 주소값이 출력됨.
 		Iterator it = list.iterator();
-		
+		System.out.println("================");
+		System.out.println("Iterator를 사용한 요소 출력");
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
 		
 		System.out.println();
 		
+		// List의 경우에는 iterator 사용하지 않고 .get(@index)로 출력 가능
+		System.out.println("================");
+		System.out.println("list.get(@index)사용한 요소 출력");
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+		
+
+		System.out.println("=====================");
+		System.out.println("HashSet");
+		System.out.println("=====================");
 		HashSet set = new HashSet();
 		set.add("김나희2");
 		set.add("김지훈1");

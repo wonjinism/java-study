@@ -15,6 +15,8 @@ public class TestBasicIO2 {
 			String str2 = br.readLine();
 			System.out.println(str1);
 			System.out.println(str2);
+			br.close();
+			fr.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("파일을 찾을 수 없습니다.");
 //			e.printStackTrace();

@@ -4,37 +4,37 @@ import java.util.Scanner;
 
 public class BookUI {
 
-	Scanner input = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 	BookMgr mgr = new BookMgr();
 	
 	public BookUI() { 	// 생성자에서 모든 걸 다 돌려주면 된다.
 		while(true) {
 			mainMenu();
-			int select = input.nextInt();
+			int select = sc.nextInt();
 			switch (select) {
 				case 1:
 					subMenu();
-					int subSelect = input.nextInt();
+					int subSelect = sc.nextInt();
 					if (subSelect == 1) {
 						System.out.println("도서번호를 입력해 주세요.");
-						String bookId = input.next();
+						String bookId = sc.next();
 						System.out.println("도서제목을 입력해 주세요.");
-						String name = input.next();
+						String name = sc.next();
 						System.out.println("도서내용을 입력해 주세요.");
-						String summary = input.next();
+						String summary = sc.next();
 						System.out.println("페이지 수를 입력해 주세요.");
-						String pageNum = input.next();
+						String pageNum = sc.next();
 						Book book = new TextBook(bookId, name, summary, pageNum);
 						mgr.addBook(book);	
 					} else if (subSelect == 2) {
 						System.out.println("도서번호를 입력해 주세요.");
-						String bookId = input.next();
+						String bookId = sc.next();
 						System.out.println("도서제목을 입력해 주세요.");
-						String name = input.next();
+						String name = sc.next();
 						System.out.println("도서내용을 입력해 주세요.");
-						String summary = input.next();
+						String summary = sc.next();
 						System.out.println("재생시간을 입력해 주세요.");
-						int playTime = input.nextInt();
+						int playTime = sc.nextInt();
 						Book book = new AudioBook(bookId, name, summary, playTime);
 						mgr.addBook(book);
 					}
@@ -42,7 +42,7 @@ public class BookUI {
 					break;
 				case 2:
 					System.out.println("도서번호를 입력해 주세요.");
-					String bookId = input.next();
+					String bookId = sc.next();
 					
 					Book result = mgr.searchBook(bookId); 
 									

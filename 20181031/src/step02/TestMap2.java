@@ -39,9 +39,11 @@ public class TestMap2 {
 		while (it2.hasNext()) {
 			String key = it2.next();
 			System.out.println("key값 : " + key);
-			System.out.println("value값 : " + map.get(it2.next()));
+			System.out.println("value값 : " + map.get(key)); 
+//			System.out.println("value값 : " + map.get(it2.next())); // next() 메서드는 호출하면 다음줄로 이동
 			System.out.println("value값의 salary" + ((Employee) map.get(key)).getSalary());
 		}
+		
 		// map에 들어 있는 value값이 Employee의 이름을 중복제거하고 전체 출력
 		// values() > Collection > Iterator()
 		Collection col3 = map.values();

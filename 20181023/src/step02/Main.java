@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int a, b, select;
 		Calculator cal = new Calculator();
 		
@@ -17,16 +17,16 @@ public class Main {
 			System.out.println("5. 종료");
 			System.out.println("==============");
 			
-			select = input.nextInt();
+			select = sc.nextInt();
 			if (select == 5) {
 				System.out.println("수고하셨습니다.");
 				break;
 			}					
 			
 			System.out.println("첫번째 수를 입력해주세요:");
-			a = input.nextInt();
+			a = sc.nextInt();
 			System.out.println("두번째 수를 입력해주세요:");
-			b = input.nextInt();
+			b = sc.nextInt();
 			
 			switch (select) {
 			case 1:

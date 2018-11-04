@@ -18,7 +18,8 @@ public class TestArrayList3 {
 		System.out.println(list);
 		
 		// LinkedList : 연속된 데이터가 끝점과 시작점이 연결되는 형태의 리스트
-		// ArrayList도 순서 변경이나 삽입이 가능하기는 하지만, index 중심이기 때문에 for문을 돌리는 도중에 변경과 삽입을 하면 오류가 난다.
+		// ArrayList도 순서 변경이나 삽입이 가능하기는 하지만, 
+		// index 중심이기 때문에 for문을 돌리는 도중에 변경과 삽입을 하면 오류가 난다.
 		LinkedList<Employee> lkList = new LinkedList<>();
 		lkList.add(new Employee("아이유", 220));
 		lkList.add(new Employee("윤계상", 320));

@@ -12,6 +12,13 @@ public class TestIterator2 {
 		list.add(new Employee("Sonya", 320));
 		list.add(new Employee("Simon", 400));
 		// 월급이 300 이상인 사람의 이름을 출력
+
+		
+		for (int i = 0; i < list.size(); i++) {
+			if (((Employee)list.get(i)).getSalary() >= 300) {
+				System.out.println(((Employee)list.get(i)).getEname());
+			}
+		}
 		
 		Iterator<Employee> it = list.iterator();
 		while(it.hasNext()) {
