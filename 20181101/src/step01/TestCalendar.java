@@ -17,5 +17,12 @@ public class TestCalendar {
 		System.out.println(today.get(Calendar.HOUR_OF_DAY));
 		System.out.println(today.get(Calendar.MINUTE));
 		System.out.println(today.get(Calendar.SECOND));
+		
+		Calendar cal = Calendar.getInstance();
+		int year = cal.get(Calendar.YEAR);
+		int month = cal.get(Calendar.MONTH) + 1;
+		int date = cal.get(Calendar.DATE);
+		String today1 = year + "년 " + month + "월 " + date + "일";
+		System.out.println(today1);
 	}
 }

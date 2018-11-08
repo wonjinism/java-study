@@ -10,6 +10,16 @@ import step01.Employee;
 
 public class TestMap2 { 
 	public static void main(String[] args) {
+		HashMap<Integer, Integer> testMap = new HashMap();
+		testMap.put(1, 100);
+		testMap.put(2, 100);
+		testMap.put(3, 100);
+		testMap.put(4, 100);
+		System.out.println(testMap);
+		testMap.put(1, 200);
+		System.out.println(testMap);
+		System.out.println(testMap.get(1));
+		
 		HashMap<String, Employee> map = new HashMap<>();
 		Employee e1 = new Employee("최명주", 250);
 		map.put("e1", e1);
