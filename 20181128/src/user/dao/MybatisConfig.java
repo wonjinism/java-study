@@ -18,6 +18,7 @@ public class MybatisConfig {
 			Reader reader = Resources.getResourceAsReader(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
 			// reader 객체에 넣어서 환경설정을 sqlSessionFactory에 집어넣기
+			reader.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

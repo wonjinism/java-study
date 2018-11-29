@@ -18,4 +18,32 @@ from userinfo i, useraddr a
 where i.id = a.id(+)
 </select>
 
+<insert id="insertUser" parameterType="User">
+	insert into userinfo (
+		id
+		, name
+		, gender
+	)
+	values(
+		#{id}
+		, #{name}
+		, #{gender}
+	)
+</insert>
+
+<insert id="insertAddress" parameterType="User">
+	insert into useraddr (
+		id
+		, phone
+		, address
+	)
+	values(
+		#{id}
+		, #{phone}
+		, #{address}
+	)
+</insert>
+<delete id="deleteUser" parameterType="String">
+	delete from userinfo where id = #{id}
+</delete>
 </mapper>
